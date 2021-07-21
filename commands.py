@@ -78,7 +78,7 @@ class fzf_select(Command):
             self.fm.notify('Could not find fzf in the PATH.', bad=True)
             return
 
-        fzf_default_command = 'ag --hidden --ignore .git --ignore .cache --ignore .steam -g ""'
+        fzf_default_command = 'ag --hidden --ignore-dir .git --ignore-dir .cache --ignore-dir .steam --ignore-dir .oh-my-zsh -g ""'
 
         env = os.environ.copy()
         env['FZF_DEFAULT_COMMAND'] = fzf_default_command
